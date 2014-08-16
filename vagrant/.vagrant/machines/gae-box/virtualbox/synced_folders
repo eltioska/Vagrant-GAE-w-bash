@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/app":{"guestpath":"/home/vagrant/app","hostpath":"/Users/ska/Vagrants/gaepw03/app","disabled":false},"/home/vagrant/storage":{"guestpath":"/home/vagrant/storage","hostpath":"/Users/ska/Vagrants/gaepw03/vagrant/storage","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/ska/Vagrants/gaepw03/vagrant","disabled":false}}}
