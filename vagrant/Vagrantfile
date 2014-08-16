@@ -47,25 +47,28 @@ Vagrant.configure("2") do |config|
     end
 
     # Share additional folders to the guest VM.
-    config.vm.synced_folder "../app", "/home/vagrant/app"
-    config.vm.synced_folder "storage", "/home/vagrant/storage"
+    config.vm.synced_folder "../app", "/home/vagrant/app", type: "nfs"
+    config.vm.synced_folder "storage", "/home/vagrant/storage", type: "nfs"
+
+
+    # ITEMS ONLY REQUIRED ON FIRST BOOT - UNCOMMENT FOR NEW VM
 
     # make sure rvm and ruby are installed
     # and ruby is at least version 1.9.3
-    config.vm.provision :shell, :path => "files/install-rvm.sh",  :args => "stable"
-    config.vm.provision :shell, :path => "files/install-ruby.sh", :args => "1.9.3"
+    # config.vm.provision :shell, :path => "files/install-rvm.sh",  :args => "stable"
+    # config.vm.provision :shell, :path => "files/install-ruby.sh", :args => "1.9.3"
 
     # vagrant shell 01 (to update packages)
-    config.vm.provision :shell, :path => "files/bootstrap.sh"
+    # config.vm.provision :shell, :path => "files/bootstrap.sh"
 
     # vagrant shell 02 (to install Google AppEngine)
-    config.vm.provision :shell, :path => "files/gae.sh"
+    # config.vm.provision :shell, :path => "files/gae.sh"
 
     # vagrant shell 03 (to update ubuntu stuff)
-    config.vm.provision :shell, :path => "files/update_ubuntu.sh"
+    # config.vm.provision :shell, :path => "files/update_ubuntu.sh"
 
     # vagrant shell 03 (to update ubuntu stuff)
-    config.vm.provision :shell, :path => "files/aliases.sh"
+    # config.vm.provision :shell, :path => "files/aliases.sh"
 
     # Provider specific configuration so you can fine-tune properties.
     config.vm.provider :virtualbox do |vb|

@@ -27,9 +27,12 @@ sudo apt-get install curl
 sudo apt-get install -y python
 sudo apt-get install -y python-dev
 sudo apt-get install -y python-pip
+sudo apt-get install -y python-imaging
 
 sudo pip install --upgrade pip
 
+# set nfs for faster file-sharing with host
+sudo apt-get install -y nfs-common portmap nfs-kernel-server
 
 # OTHER ITEMS TO INSTALL:
 sudo apt-get install -y git zip unzip
