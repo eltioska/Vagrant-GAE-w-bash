@@ -64,6 +64,9 @@ Vagrant.configure("2") do |config|
     # vagrant shell 03 (to update ubuntu stuff)
     config.vm.provision :shell, :path => "files/update_ubuntu.sh"
 
+    # vagrant shell 03 (to update ubuntu stuff)
+    config.vm.provision :shell, :path => "files/aliases.sh"
+
     # Provider specific configuration so you can fine-tune properties.
     config.vm.provider :virtualbox do |vb|
         vb.name = "appengine"

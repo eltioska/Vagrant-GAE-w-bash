@@ -41,6 +41,7 @@ sudo gem install sass
 sudo gem install compass
 
 # set custom bashrc
-cp /vagrant/files/bashrc ~/.bashrc
+# cp /vagrant/files/bashrc ~/.bashrc
+cp /files/bashrc ~/.bashrc
 # Load .bashrc if it exists
 test -f ~/.bashrc && source ~/.bashrc
