@@ -1,6 +1,6 @@
-.pyc
-.db*
-.db
+*.pyc
+*.db*
+*.db
 .editorconfig
 .vagrant/
 search_indexes
